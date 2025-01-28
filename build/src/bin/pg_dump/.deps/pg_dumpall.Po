@@ -1,0 +1,61 @@
+pg_dumpall.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/pg_dumpall.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../src/include/pg_config_ext.h ../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ ../../../src/include/catalog/pg_authid_d.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/connect.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/file_utils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/hashfn_unstable.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bitutils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bswap.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/dumputils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/pqexpbuffer.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/string_utils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/filter.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/pg_backup.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/compression.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/simple_list.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/simplehash.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../src/include/pg_config_ext.h:
+../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+../../../src/include/catalog/pg_authid_d.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/connect.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/file_utils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/hashfn_unstable.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bitutils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bswap.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/dumputils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/pqexpbuffer.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/string_utils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/filter.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_dump/pg_backup.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/compression.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/simple_list.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/simplehash.h:

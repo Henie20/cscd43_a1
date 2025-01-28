@@ -1,0 +1,74 @@
+utf8_and_win.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/utf8_and_win.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../../../../src/include/pg_config_ext.h \
+ ../../../../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1250.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1251.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1252.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1253.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1254.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1255.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1256.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1257.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1258.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win866.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win874.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1250_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1251_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1252_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1253_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1254_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1255_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1256_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1257_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win866_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win874_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1258_to_utf8.map
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../../../../src/include/pg_config_ext.h:
+../../../../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1250.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1251.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1252.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1253.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1254.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1255.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1256.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1257.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win1258.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win866.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/utf8_to_win874.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1250_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1251_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1252_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1253_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1254_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1255_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1256_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1257_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win866_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win874_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_win/../../Unicode/win1258_to_utf8.map:

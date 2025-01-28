@@ -1,0 +1,32 @@
+rmgrdesc_utils.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/access/rmgrdesc/rmgrdesc_utils.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../../src/include/pg_config_ext.h \
+ ../../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/rmgrdesc_utils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/off.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemid.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../../src/include/pg_config_ext.h:
+../../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/rmgrdesc_utils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/off.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemid.h:

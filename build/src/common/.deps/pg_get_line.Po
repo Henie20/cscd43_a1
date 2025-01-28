@@ -1,0 +1,23 @@
+pg_get_line.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/common/pg_get_line.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../src/include/pg_config_ext.h ../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../src/include/pg_config_ext.h:
+../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:

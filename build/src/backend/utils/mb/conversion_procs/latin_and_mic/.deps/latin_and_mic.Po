@@ -1,0 +1,30 @@
+latin_and_mic.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/latin_and_mic/latin_and_mic.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../../../../src/include/pg_config_ext.h \
+ ../../../../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../../../../src/include/pg_config_ext.h:
+../../../../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:

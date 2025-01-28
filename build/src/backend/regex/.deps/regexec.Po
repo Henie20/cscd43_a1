@@ -1,0 +1,41 @@
+regexec.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/regex/regexec.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regguts.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regcustom.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../src/include/pg_config_ext.h ../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/miscadmin.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/datatype/timestamp.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pgtime.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regex.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/regex/rege_dfa.c
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regguts.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regcustom.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../src/include/pg_config_ext.h:
+../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/miscadmin.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/datatype/timestamp.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pgtime.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/regex/regex.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/regex/rege_dfa.c:

@@ -1,0 +1,82 @@
+utf8_and_iso8859.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/utf8_and_iso8859.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../../../../src/include/pg_config_ext.h \
+ ../../../../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_10_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_13_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_14_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_15_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_2_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_3_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_4_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_5_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_6_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_7_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_8_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_9_to_utf8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_10.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_13.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_14.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_15.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_16.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_2.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_3.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_4.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_5.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_6.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_7.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_8.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_9.map \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_16_to_utf8.map
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../../../../src/include/pg_config_ext.h:
+../../../../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_10_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_13_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_14_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_15_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_2_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_3_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_4_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_5_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_6_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_7_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_8_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_9_to_utf8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_10.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_13.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_14.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_15.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_16.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_2.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_3.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_4.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_5.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_6.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_7.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_8.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/utf8_to_iso8859_9.map:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/utils/mb/conversion_procs/utf8_and_iso8859/../../Unicode/iso8859_16_to_utf8.map:

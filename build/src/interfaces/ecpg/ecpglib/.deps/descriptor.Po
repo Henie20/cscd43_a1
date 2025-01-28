@@ -1,0 +1,54 @@
+descriptor.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/ecpglib/descriptor.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../../src/include/pg_config_ext.h \
+ ../../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ ../../../../src/include/catalog/pg_type_d.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpg-pthread-win32.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgerrno.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpglib.h \
+ ../include/ecpg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgtype.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlca.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/ecpglib/ecpglib_extern.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgtype.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlca.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-compat.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-native.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sql3types.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-native.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../../src/include/pg_config_ext.h:
+../../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+../../../../src/include/catalog/pg_type_d.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpg-pthread-win32.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgerrno.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpglib.h:
+../include/ecpg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgtype.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlca.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/ecpglib/ecpglib_extern.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/ecpgtype.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlca.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-compat.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-native.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sql3types.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/ecpg/include/sqlda-native.h:

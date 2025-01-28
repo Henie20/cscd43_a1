@@ -1,0 +1,229 @@
+dict_snowball.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/backend/snowball/dict_snowball.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../src/include/pg_config_ext.h ../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h \
+ ../../../src/include/utils/errcodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/commands/defrem.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/objectaddress.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/htup.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemptr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/block.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/off.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemid.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/parsenodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/relpath.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/catversion.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/bitmapset.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/nodes.h \
+ ../../../src/include/nodes/nodetags.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/lockoptions.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/primnodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/attnum.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/pg_list.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/value.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/partitioning/partdefs.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/lockdefs.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/relcache.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/tupdesc.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/pg_attribute.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/genbki.h \
+ ../../../src/include/catalog/pg_attribute_d.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/params.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/parser/parse_node.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/queryenvironment.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/dest.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/executor/tuptable.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/htup_details.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/transam.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/tupmacs.h \
+ ../../../src/include/catalog/pg_type_d.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/bufpage.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/item.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/varatt.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/sysattr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/buf.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/cmdtag.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/cmdtaglist.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/array.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/expandeddatum.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_locale.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/pg_locale.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_public.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_type.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/memutils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/memnodes.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/header.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/api.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_basque.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_catalan.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_danish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_dutch.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_english.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_finnish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_french.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_german.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_indonesian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_irish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_italian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_norwegian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_porter.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_portuguese.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_spanish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_swedish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_2_hungarian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_2_romanian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_KOI8_R_russian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_arabic.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_armenian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_basque.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_catalan.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_danish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_dutch.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_english.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_finnish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_french.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_german.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_greek.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_hindi.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_hungarian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_indonesian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_irish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_italian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_lithuanian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_nepali.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_norwegian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_porter.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_portuguese.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_romanian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_russian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_serbian.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_spanish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_swedish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_tamil.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_turkish.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_yiddish.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../src/include/pg_config_ext.h:
+../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/elog.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/lib/stringinfo.h:
+../../../src/include/utils/errcodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/palloc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/commands/defrem.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/objectaddress.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/htup.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemptr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/block.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/off.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/itemid.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/parsenodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/relpath.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/catversion.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/bitmapset.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/nodes.h:
+../../../src/include/nodes/nodetags.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/lockoptions.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/primnodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/attnum.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/pg_list.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/value.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/partitioning/partdefs.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/lockdefs.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/relcache.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/tupdesc.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/pg_attribute.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/genbki.h:
+../../../src/include/catalog/pg_attribute_d.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/params.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/parser/parse_node.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/queryenvironment.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/dest.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/executor/tuptable.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/htup_details.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/transam.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/tupmacs.h:
+../../../src/include/catalog/pg_type_d.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/bufpage.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/item.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/varatt.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/sysattr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/storage/buf.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/cmdtag.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tcop/cmdtaglist.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/array.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fmgr.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/expandeddatum.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_locale.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/pg_locale.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_public.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/tsearch/ts_type.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/utils/memutils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/nodes/memnodes.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/header.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/api.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_basque.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_catalan.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_danish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_dutch.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_english.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_finnish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_french.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_german.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_indonesian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_irish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_italian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_norwegian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_porter.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_portuguese.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_spanish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_1_swedish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_2_hungarian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_ISO_8859_2_romanian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_KOI8_R_russian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_arabic.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_armenian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_basque.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_catalan.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_danish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_dutch.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_english.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_finnish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_french.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_german.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_greek.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_hindi.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_hungarian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_indonesian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_irish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_italian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_lithuanian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_nepali.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_norwegian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_porter.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_portuguese.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_romanian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_russian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_serbian.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_spanish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_swedish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_tamil.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_turkish.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/snowball/libstemmer/stem_UTF_8_yiddish.h:

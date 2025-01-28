@@ -1,0 +1,27 @@
+saslprep.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/common/saslprep.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../src/include/pg_config_ext.h ../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/saslprep.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/unicode_norm.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../src/include/pg_config_ext.h:
+../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/saslprep.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/string.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/unicode_norm.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/mb/pg_wchar.h:

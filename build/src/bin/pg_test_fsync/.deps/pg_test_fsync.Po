@@ -1,0 +1,29 @@
+pg_test_fsync.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_test_fsync/pg_test_fsync.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../src/include/pg_config_ext.h ../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/pg_prng.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../src/include/pg_config_ext.h:
+../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/pg_prng.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h:

@@ -1,0 +1,61 @@
+pg_createsubscriber.o: \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/bin/pg_basebackup/pg_createsubscriber.c \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ ../../../src/include/pg_config_ext.h ../../../src/include/pg_config.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h \
+ ../../../src/include/pg_config_os.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h \
+ ../../../src/include/catalog/pg_authid_d.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/connect.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/controldata_utils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/pg_control.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/transam.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pgtime.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_crc32c.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bswap.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/file_perm.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/pg_prng.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/restricted_token.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/recovery_gen.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/pqexpbuffer.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/simple_list.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/string_utils.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h \
+ /cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+../../../src/include/pg_config_ext.h:
+../../../src/include/pg_config.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_config_manual.h:
+../../../src/include/pg_config_os.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/fe_memutils.h:
+../../../src/include/catalog/pg_authid_d.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/connect.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/controldata_utils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/catalog/pg_control.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/transam.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/access/xlogdefs.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pgtime.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_crc32c.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/port/pg_bswap.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/file_perm.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/logging.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/pg_prng.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/common/restricted_token.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/recovery_gen.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/libpq-fe.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/postgres_ext.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/interfaces/libpq/pqexpbuffer.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/simple_list.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/fe_utils/string_utils.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/getopt_long.h:
+/cmshome/pate1766/cscd43w25_space/build/./../postgresql-17.2/src/include/pg_getopt.h:
