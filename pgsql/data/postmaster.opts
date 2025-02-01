@@ -1,1 +1,1 @@
-/courses/courses/cscd43w25/pate1766/pgsql/bin/postgres "-B" "20" "-D" "pgsql/data" "-p" "5000"
+/courses/courses/cscd43w25/pate1766/pgsql/bin/postgres "-B" "16" "-D" "pgsql/data" "-p" "5000"
