@@ -172,12 +172,11 @@ ClockSweepTick(void)
  * that was least recently used from the set of unpinned
  * buffers.
  */
-BufferDesc *LRU_victim (uint32 *state) {
+BufferDesc *LRU_victim (void) {
 	BufferDescPadded *bufpool = BufferDescriptors;
 	time_t latest = LONG_MAX;
 	BufferDesc *buf = NULL;
-    uint32 local_buf_state;
-    uint32 victim_buf_state;
+	uint32 local_buf_state;
 
 	for (int i = 0; i < NBuffers; i++) {
 		local_buf_state = LockBufHdr(&bufpool[i]);
@@ -186,12 +185,10 @@ BufferDesc *LRU_victim (uint32 *state) {
 			if (bufpool[i].bufferdesc.access_time <= latest) {
 				buf = &bufpool[i].bufferdesc;
 				latest = bufpool[i].bufferdesc.access_time;
-                victim_buf_state = local_buf_state;
 			}
 		}
 		UnlockBufHdr(&bufpool[i], local_buf_state);
 	}
-	*state = victim_buf_state;
 	return buf;
 }
 // END NEWCODE
@@ -234,8 +231,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 	uint32		local_buf_state;	/* to avoid repeated (de-)referencing */
 
 	*from_ring = false;
-
-	elog(DEBUG1, "This is a debug message: %s", "Here is the buffer info");
 
 	/*
 	 * If given a strategy object, see whether it can select a buffer. We
@@ -346,9 +341,10 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 	// BEGIN NEWCODE
 
 	/* Nothing on the freelist, so run the "LRU" algorithm */
-	trycounter = NBuffers;
-	buf = LRU_victim(buf_state);
+	buf = LRU_victim();
+	local_buf_state = LockBufHdr(buf);
 	if (buf != NULL) {
+		*buf_state = local_buf_state;
 		return buf;
 	} else
 	{
@@ -356,6 +352,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 			* We've scanned all the buffers without finding a
 			* usable candidate.
 			*/
+		UnlockBufHdr(buf, local_buf_state);
 		elog(ERROR, "no unpinned buffers available");
 	}
 

@@ -5556,12 +5556,13 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	}
 
 	buf_state |= BM_IO_IN_PROGRESS;
+	buf->access_time = time(0);
+	
 	UnlockBufHdr(buf, buf_state);
 
 	ResourceOwnerRememberBufferIO(CurrentResourceOwner,
 								  BufferDescriptorGetBuffer(buf));
 
-	buf->access_time = time(0);
 	return true;
 }
 
