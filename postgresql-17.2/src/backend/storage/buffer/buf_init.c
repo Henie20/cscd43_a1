@@ -149,8 +149,6 @@ InitBufferPool(void)
 	WritebackContextInit(&BackendWritebackContext,
 						 &backend_flush_after);
 
-	elog(LOG, "TESTING");
-
 }
 
 /*
