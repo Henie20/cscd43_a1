@@ -5561,6 +5561,7 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	ResourceOwnerRememberBufferIO(CurrentResourceOwner,
 								  BufferDescriptorGetBuffer(buf));
 
+	buf->access_time = time(0);
 	return true;
 }
 

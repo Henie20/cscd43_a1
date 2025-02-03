@@ -131,6 +131,9 @@ InitBufferPool(void)
 			 * management of this list is done by freelist.c.
 			 */
 			buf->freeNext = i + 1;
+			// BEGIN NEW CODE
+			buf->access_time = time(0);
+			// END NEW CODE
 
 			LWLockInitialize(BufferDescriptorGetContentLock(buf),
 							 LWTRANCHE_BUFFER_CONTENT);
@@ -148,8 +151,6 @@ InitBufferPool(void)
 	/* Initialize per-backend file flush context */
 	WritebackContextInit(&BackendWritebackContext,
 						 &backend_flush_after);
-
-	elog(LOG, "TESTING");
 
 }
 

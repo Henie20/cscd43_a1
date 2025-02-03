@@ -163,6 +163,39 @@ ClockSweepTick(void)
 	return victim;
 }
 
+// BEGIN NEWCODE
+
+/*
+ * LRU_victim - Helper routine for StrategyGetBuffer()
+ *
+ * Look through all the buffers and return the one
+ * that was least recently used from the set of unpinned
+ * buffers.
+ */
+BufferDesc *LRU_victim (uint32 *state) {
+	BufferDescPadded *bufpool = BufferDescriptors;
+	time_t latest = LONG_MAX;
+	BufferDesc *buf = NULL;
+    uint32 local_buf_state;
+    uint32 victim_buf_state;
+
+	for (int i = 0; i < NBuffers; i++) {
+		local_buf_state = LockBufHdr(&bufpool[i]);
+		// see if it is is unpinned
+		if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0) {
+			if (bufpool[i].bufferdesc.access_time <= latest) {
+				buf = &bufpool[i].bufferdesc;
+				latest = bufpool[i].bufferdesc.access_time;
+                victim_buf_state = local_buf_state;
+			}
+		}
+		UnlockBufHdr(&bufpool[i], local_buf_state);
+	}
+	*state = victim_buf_state;
+	return buf;
+}
+// END NEWCODE
+
 /*
  * have_free_buffer -- a lockless check to see if there is a free buffer in
  *					   buffer pool.
@@ -202,19 +235,21 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 
 	*from_ring = false;
 
+	elog(DEBUG1, "This is a debug message: %s", "Here is the buffer info");
+
 	/*
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need buffer_strategy_lock.
 	 */
-	if (strategy != NULL)
-	{
-		buf = GetBufferFromRing(strategy, buf_state);
-		if (buf != NULL)
-		{
-			*from_ring = true;
-			return buf;
-		}
-	}
+	// if (strategy != NULL)
+	// {
+	// 	buf = GetBufferFromRing(strategy, buf_state);
+	// 	if (buf != NULL)
+	// 	{
+	// 		*from_ring = true;
+	// 		return buf;
+	// 	}
+	// }
 
 	/*
 	 * If asked, we need to waken the bgwriter. Since we don't want to rely on
@@ -299,11 +334,8 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 			 * of 8.3, but we'd better check anyway.)
 			 */
 			local_buf_state = LockBufHdr(buf);
-			if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0
-				&& BUF_STATE_GET_USAGECOUNT(local_buf_state) == 0)
+			if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0)
 			{
-				if (strategy != NULL)
-					AddBufferToRing(strategy, buf);
 				*buf_state = local_buf_state;
 				return buf;
 			}
@@ -311,49 +343,23 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 		}
 	}
 
-	/* Nothing on the freelist, so run the "clock sweep" algorithm */
+	// BEGIN NEWCODE
+
+	/* Nothing on the freelist, so run the "LRU" algorithm */
 	trycounter = NBuffers;
-	for (;;)
+	buf = LRU_victim(buf_state);
+	if (buf != NULL) {
+		return buf;
+	} else
 	{
-		buf = GetBufferDescriptor(ClockSweepTick());
-
 		/*
-		 * If the buffer is pinned or has a nonzero usage_count, we cannot use
-		 * it; decrement the usage_count (unless pinned) and keep scanning.
-		 */
-		local_buf_state = LockBufHdr(buf);
-
-		if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0)
-		{
-			if (BUF_STATE_GET_USAGECOUNT(local_buf_state) != 0)
-			{
-				local_buf_state -= BUF_USAGECOUNT_ONE;
-
-				trycounter = NBuffers;
-			}
-			else
-			{
-				/* Found a usable buffer */
-				if (strategy != NULL)
-					AddBufferToRing(strategy, buf);
-				*buf_state = local_buf_state;
-				return buf;
-			}
-		}
-		else if (--trycounter == 0)
-		{
-			/*
-			 * We've scanned all the buffers without making any state changes,
-			 * so all the buffers are pinned (or were when we looked at them).
-			 * We could hope that someone will free one eventually, but it's
-			 * probably better to fail than to risk getting stuck in an
-			 * infinite loop.
-			 */
-			UnlockBufHdr(buf, local_buf_state);
-			elog(ERROR, "no unpinned buffers available");
-		}
-		UnlockBufHdr(buf, local_buf_state);
+			* We've scanned all the buffers without finding a
+			* usable candidate.
+			*/
+		elog(ERROR, "no unpinned buffers available");
 	}
+
+	// END NEWCODE
 }
 
 /*
