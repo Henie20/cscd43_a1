@@ -179,15 +179,15 @@ BufferDesc *LRU_victim (void) {
 	uint32 local_buf_state;
 
 	for (int i = 0; i < NBuffers; i++) {
-		local_buf_state = LockBufHdr(&bufpool[i]);
+		local_buf_state = LockBufHdr(&bufpool[i].bufferdesc);
 		// see if it is is unpinned
 		if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0) {
-			if (bufpool[i].bufferdesc.access_time <= latest) {
+			if (bufpool[i].bufferdesc.access_time < latest) {
 				buf = &bufpool[i].bufferdesc;
 				latest = bufpool[i].bufferdesc.access_time;
 			}
 		}
-		UnlockBufHdr(&bufpool[i], local_buf_state);
+		UnlockBufHdr(&bufpool[i].bufferdesc, local_buf_state);
 	}
 	return buf;
 }
