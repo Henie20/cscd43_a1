@@ -1,124 +1,124 @@
                                                  QUERY PLAN                                                 
 ------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=106.90..106.91 rows=1 width=8) (actual time=1.594..1.595 rows=1 loops=1)
+ Aggregate  (cost=106.90..106.91 rows=1 width=8) (actual time=1.240..1.241 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..103.00 rows=1559 width=0) (actual time=0.030..1.385 rows=1542 loops=1)
+   ->  Seq Scan on data  (cost=0.00..103.00 rows=1559 width=0) (actual time=0.029..1.085 rows=1542 loops=1)
          Filter: ((a > 20) AND (b < 40))
          Rows Removed by Filter: 3458
          Buffers: shared read=28
  Planning:
    Buffers: shared hit=5 read=50
- Planning Time: 14.063 ms
- Execution Time: 1.683 ms
+ Planning Time: 14.341 ms
+ Execution Time: 1.300 ms
 (10 rows)
 
                                                 QUERY PLAN                                                
 ----------------------------------------------------------------------------------------------------------
- Aggregate  (cost=128.57..128.58 rows=1 width=8) (actual time=1.853..1.854 rows=1 loops=1)
+ Aggregate  (cost=128.57..128.58 rows=1 width=8) (actual time=1.153..1.153 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..128.00 rows=230 width=0) (actual time=0.019..1.810 rows=233 loops=1)
+   ->  Seq Scan on data  (cost=0.00..128.00 rows=230 width=0) (actual time=0.014..1.121 rows=233 loops=1)
          Filter: ((a > 10) AND (a < 50) AND (b < 30) AND (c > 60))
          Rows Removed by Filter: 4767
          Buffers: shared read=28
  Planning:
    Buffers: shared read=3
- Planning Time: 0.143 ms
- Execution Time: 1.878 ms
+ Planning Time: 0.105 ms
+ Execution Time: 1.168 ms
 (10 rows)
 
                                                QUERY PLAN                                               
 --------------------------------------------------------------------------------------------------------
- Aggregate  (cost=103.14..103.15 rows=1 width=8) (actual time=1.215..1.216 rows=1 loops=1)
+ Aggregate  (cost=103.14..103.15 rows=1 width=8) (actual time=0.944..0.945 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..103.00 rows=55 width=0) (actual time=0.034..1.203 rows=52 loops=1)
+   ->  Seq Scan on data  (cost=0.00..103.00 rows=55 width=0) (actual time=0.024..0.935 rows=52 loops=1)
          Filter: ((a < 5) AND (b > 75))
          Rows Removed by Filter: 4948
          Buffers: shared read=28
- Planning Time: 0.069 ms
- Execution Time: 1.236 ms
+ Planning Time: 0.047 ms
+ Execution Time: 0.958 ms
 (8 rows)
 
                                                 QUERY PLAN                                                
 ----------------------------------------------------------------------------------------------------------
- Aggregate  (cost=117.89..117.90 rows=1 width=8) (actual time=1.282..1.283 rows=1 loops=1)
+ Aggregate  (cost=117.89..117.90 rows=1 width=8) (actual time=1.261..1.262 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..115.50 rows=954 width=0) (actual time=0.016..1.181 rows=977 loops=1)
+   ->  Seq Scan on data  (cost=0.00..115.50 rows=954 width=0) (actual time=0.017..1.142 rows=977 loops=1)
          Filter: ((b > 20) AND (b < 60) AND (c <= 50))
          Rows Removed by Filter: 4023
          Buffers: shared read=28
- Planning Time: 0.066 ms
- Execution Time: 1.297 ms
+ Planning Time: 0.055 ms
+ Execution Time: 1.276 ms
 (8 rows)
 
                                                 QUERY PLAN                                                
 ----------------------------------------------------------------------------------------------------------
- Aggregate  (cost=130.10..130.11 rows=1 width=8) (actual time=1.244..1.245 rows=1 loops=1)
+ Aggregate  (cost=130.10..130.11 rows=1 width=8) (actual time=1.241..1.241 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..128.00 rows=842 width=0) (actual time=0.015..1.158 rows=831 loops=1)
+   ->  Seq Scan on data  (cost=0.00..128.00 rows=842 width=0) (actual time=0.015..1.156 rows=831 loops=1)
          Filter: ((a > 30) AND (a < 70) AND (c > 40) AND (c < 84))
          Rows Removed by Filter: 4169
          Buffers: shared read=28
- Planning Time: 0.055 ms
- Execution Time: 1.258 ms
+ Planning Time: 0.054 ms
+ Execution Time: 1.254 ms
 (8 rows)
 
                                                QUERY PLAN                                               
 --------------------------------------------------------------------------------------------------------
- Aggregate  (cost=128.03..128.04 rows=1 width=8) (actual time=0.954..0.955 rows=1 loops=1)
+ Aggregate  (cost=128.03..128.04 rows=1 width=8) (actual time=0.943..0.944 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..128.00 rows=13 width=0) (actual time=0.026..0.950 rows=12 loops=1)
+   ->  Seq Scan on data  (cost=0.00..128.00 rows=13 width=0) (actual time=0.027..0.939 rows=12 loops=1)
          Filter: ((a < 10) AND (b > 90) AND (c > 20) AND (c < 50))
          Rows Removed by Filter: 4988
          Buffers: shared read=28
- Planning Time: 0.051 ms
- Execution Time: 0.966 ms
+ Planning Time: 0.063 ms
+ Execution Time: 0.956 ms
 (8 rows)
 
                                                 QUERY PLAN                                                
 ----------------------------------------------------------------------------------------------------------
- Aggregate  (cost=130.37..130.38 rows=1 width=8) (actual time=1.313..1.314 rows=1 loops=1)
+ Aggregate  (cost=130.37..130.38 rows=1 width=8) (actual time=1.224..1.225 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..128.00 rows=947 width=0) (actual time=0.014..1.201 rows=935 loops=1)
+   ->  Seq Scan on data  (cost=0.00..128.00 rows=947 width=0) (actual time=0.016..1.116 rows=935 loops=1)
          Filter: ((a > 50) AND (b > 30) AND (b < 70) AND (c > 0))
          Rows Removed by Filter: 4065
          Buffers: shared read=28
- Planning Time: 0.050 ms
- Execution Time: 1.326 ms
+ Planning Time: 0.052 ms
+ Execution Time: 1.237 ms
 (8 rows)
 
                                                  QUERY PLAN                                                 
 ------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=119.42..119.43 rows=1 width=8) (actual time=1.294..1.294 rows=1 loops=1)
+ Aggregate  (cost=119.42..119.43 rows=1 width=8) (actual time=1.301..1.302 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..115.50 rows=1566 width=0) (actual time=0.015..1.140 rows=1548 loops=1)
+   ->  Seq Scan on data  (cost=0.00..115.50 rows=1566 width=0) (actual time=0.014..1.148 rows=1548 loops=1)
          Filter: ((b > 40) AND (a > 10) AND (c < 60))
          Rows Removed by Filter: 3452
          Buffers: shared read=28
- Planning Time: 0.070 ms
- Execution Time: 1.307 ms
+ Planning Time: 0.044 ms
+ Execution Time: 1.313 ms
 (8 rows)
 
                                                 QUERY PLAN                                                
 ----------------------------------------------------------------------------------------------------------
- Aggregate  (cost=130.13..130.14 rows=1 width=8) (actual time=1.203..1.203 rows=1 loops=1)
+ Aggregate  (cost=130.13..130.14 rows=1 width=8) (actual time=1.174..1.174 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..128.00 rows=851 width=0) (actual time=0.015..1.097 rows=840 loops=1)
+   ->  Seq Scan on data  (cost=0.00..128.00 rows=851 width=0) (actual time=0.015..1.088 rows=840 loops=1)
          Filter: ((a > 60) AND (a < 100) AND (b < 50) AND (c > 10))
          Rows Removed by Filter: 4160
          Buffers: shared read=28
- Planning Time: 0.049 ms
- Execution Time: 1.215 ms
+ Planning Time: 0.048 ms
+ Execution Time: 1.185 ms
 (8 rows)
 
                                                QUERY PLAN                                               
 --------------------------------------------------------------------------------------------------------
- Aggregate  (cost=140.53..140.54 rows=1 width=8) (actual time=1.046..1.046 rows=1 loops=1)
+ Aggregate  (cost=140.53..140.54 rows=1 width=8) (actual time=1.076..1.077 rows=1 loops=1)
    Buffers: shared read=28
-   ->  Seq Scan on data  (cost=0.00..140.50 rows=13 width=0) (actual time=0.056..1.042 rows=10 loops=1)
+   ->  Seq Scan on data  (cost=0.00..140.50 rows=13 width=0) (actual time=0.088..1.072 rows=10 loops=1)
          Filter: ((a > 1) AND (a < 10) AND (b > 50) AND (b < 80) AND (c > 90))
          Rows Removed by Filter: 4990
          Buffers: shared read=28
- Planning Time: 0.057 ms
- Execution Time: 1.059 ms
+ Planning Time: 0.054 ms
+ Execution Time: 1.091 ms
 (8 rows)
 
