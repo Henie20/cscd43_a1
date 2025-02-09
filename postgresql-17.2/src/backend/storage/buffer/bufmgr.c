@@ -810,7 +810,8 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 	 */
 	buf = ReadBuffer_common(reln, RelationGetSmgr(reln), 0,
 							forkNum, blockNum, mode, strategy);
-
+	
+	
 	return buf;
 }
 
@@ -1186,6 +1187,9 @@ PinBufferForBlock(Relation rel,
 										  true);
 	}
 
+	// BEGIN NEWCODE
+	bufHdr->access_time = time(0);
+	// END NEWCODE
 	return BufferDescriptorGetBuffer(bufHdr);
 }
 
@@ -5556,9 +5560,6 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	}
 
 	buf_state |= BM_IO_IN_PROGRESS;
-	// BEGIN NEW CODE
-	buf->access_time = time(0);
-	// END NEW CODE
 	
 	UnlockBufHdr(buf, buf_state);
 
