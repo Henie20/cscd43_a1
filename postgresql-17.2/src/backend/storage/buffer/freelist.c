@@ -173,21 +173,22 @@ ClockSweepTick(void)
  * buffers.
  */
 BufferDesc *LRU_victim (void) {
-	BufferDescPadded *bufpool = BufferDescriptors;
 	time_t latest = LONG_MAX;
 	BufferDesc *buf = NULL;
+	BufferDesc *cur = NULL;
 	uint32 local_buf_state;
 
 	for (int i = 0; i < NBuffers; i++) {
-		local_buf_state = LockBufHdr(&bufpool[i].bufferdesc);
+		cur = &BufferDescriptors[i].bufferdesc;
+		local_buf_state = LockBufHdr(cur);
 		// see if it is is unpinned
 		if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0) {
-			if (bufpool[i].bufferdesc.access_time <= latest) {
-				buf = &bufpool[i].bufferdesc;
-				latest = bufpool[i].bufferdesc.access_time;
+			if (cur->access_time <= latest) {
+				buf = cur;
+				latest = cur->access_time;
 			}
 		}
-		UnlockBufHdr(&bufpool[i].bufferdesc, local_buf_state);
+		UnlockBufHdr(cur, local_buf_state);
 	}
 	return buf;
 }
