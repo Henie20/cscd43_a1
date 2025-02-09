@@ -1187,9 +1187,6 @@ PinBufferForBlock(Relation rel,
 										  true);
 	}
 
-	// BEGIN NEWCODE
-	bufHdr->access_time = time(0);
-	// END NEWCODE
 	return BufferDescriptorGetBuffer(bufHdr);
 }
 
@@ -1651,6 +1648,9 @@ BufferAlloc(SMgrRelation smgr, char relpersistence, ForkNumber forkNum,
 			*foundPtr = false;
 		}
 
+		// BEGIN NEWCODE
+		buf->access_time = time(0);
+		// END NEWCODE
 		return buf;
 	}
 
@@ -1719,6 +1719,9 @@ BufferAlloc(SMgrRelation smgr, char relpersistence, ForkNumber forkNum,
 			*foundPtr = false;
 		}
 
+		// BEGIN NEWCODE
+		existing_buf_hdr->access_time = time(0);
+		// END NEWCODE
 		return existing_buf_hdr;
 	}
 
@@ -1752,6 +1755,9 @@ BufferAlloc(SMgrRelation smgr, char relpersistence, ForkNumber forkNum,
 	 */
 	*foundPtr = false;
 
+	// BEGIN NEWCODE
+	victim_buf_hdr->access_time = time(0);
+	// END NEWCODE
 	return victim_buf_hdr;
 }
 
