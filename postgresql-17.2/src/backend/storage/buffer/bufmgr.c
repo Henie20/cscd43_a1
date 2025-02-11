@@ -36,6 +36,7 @@
 
 #include <sys/file.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "access/tableam.h"
 #include "access/xloginsert.h"
@@ -5568,6 +5569,9 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	ResourceOwnerRememberBufferIO(CurrentResourceOwner,
 								  BufferDescriptorGetBuffer(buf));
 
+	// BEGIN NEWCODE
+	buf->access_time = time(0);
+	// END NEWCODE
 	return true;
 }
 

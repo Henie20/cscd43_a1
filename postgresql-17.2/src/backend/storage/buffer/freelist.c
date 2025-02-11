@@ -13,6 +13,7 @@
  *
  *-------------------------------------------------------------------------
  */
+
 #include "postgres.h"
 
 #include "pgstat.h"
@@ -173,17 +174,18 @@ ClockSweepTick(void)
  * buffers.
  */
 BufferDesc *LRU_victim (void) {
+
+	
 	time_t latest = LONG_MAX;
 	BufferDesc *buf = NULL;
 	BufferDesc *cur = NULL;
 	uint32 local_buf_state;
 
 	for (int i = 0; i < NBuffers; i++) {
-		cur = &BufferDescriptors[i].bufferdesc;
+		cur = GetBufferDescriptor(i);
 		local_buf_state = LockBufHdr(cur);
-		// see if it is is unpinned
 		if (BUF_STATE_GET_REFCOUNT(local_buf_state) == 0) {
-			if (cur->access_time <= latest) {
+			if (cur->access_time < latest) {
 				buf = cur;
 				latest = cur->access_time;
 			}
@@ -343,8 +345,8 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 
 	/* Nothing on the freelist, so run the "LRU" algorithm */
 	buf = LRU_victim();
-	local_buf_state = LockBufHdr(buf);
 	if (buf != NULL) {
+		local_buf_state = LockBufHdr(buf);
 		*buf_state = local_buf_state;
 		return buf;
 	} else
@@ -353,7 +355,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 			* We've scanned all the buffers without finding a
 			* usable candidate.
 			*/
-		UnlockBufHdr(buf, local_buf_state);
 		elog(ERROR, "no unpinned buffers available");
 	}
 
