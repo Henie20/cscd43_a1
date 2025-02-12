@@ -1,36 +1,36 @@
                                                         QUERY PLAN                                                         
 ---------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=4.30..4.31 rows=1 width=8) (actual time=1.846..1.846 rows=1 loops=1)
+ Aggregate  (cost=4.30..4.31 rows=1 width=8) (actual time=1.717..1.718 rows=1 loops=1)
    Buffers: shared read=3
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.30 rows=1 width=0) (actual time=1.838..1.840 rows=1 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.30 rows=1 width=0) (actual time=1.706..1.707 rows=1 loops=1)
          Index Cond: (id = 30)
          Heap Fetches: 0
          Buffers: shared read=3
  Planning:
    Buffers: shared hit=37 read=22
- Planning Time: 20.261 ms
- Execution Time: 1.943 ms
+ Planning Time: 21.014 ms
+ Execution Time: 1.814 ms
 (10 rows)
 
                                                          QUERY PLAN                                                          
 -----------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=4.75..4.76 rows=1 width=8) (actual time=0.018..0.019 rows=1 loops=1)
+ Aggregate  (cost=4.75..4.76 rows=1 width=8) (actual time=0.019..0.020 rows=1 loops=1)
    Buffers: shared hit=3
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.70 rows=21 width=0) (actual time=0.008..0.012 rows=21 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.70 rows=21 width=0) (actual time=0.009..0.013 rows=21 loops=1)
          Index Cond: ((id >= 20) AND (id <= '40'::bigint))
          Heap Fetches: 0
          Buffers: shared hit=3
  Planning:
    Buffers: shared hit=16
- Planning Time: 0.219 ms
- Execution Time: 0.041 ms
+ Planning Time: 0.202 ms
+ Execution Time: 0.043 ms
 (10 rows)
 
                                                           QUERY PLAN                                                           
 -------------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=8.06..8.07 rows=1 width=8) (actual time=0.084..0.084 rows=1 loops=1)
+ Aggregate  (cost=8.06..8.07 rows=1 width=8) (actual time=0.071..0.072 rows=1 loops=1)
    Buffers: shared hit=3
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..7.68 rows=151 width=0) (actual time=0.030..0.062 rows=150 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..7.68 rows=151 width=0) (actual time=0.023..0.050 rows=150 loops=1)
          Index Cond: ((id >= 50) AND (id <= '200'::bigint))
          Filter: (id <> 90)
          Rows Removed by Filter: 1
@@ -38,94 +38,94 @@
          Buffers: shared hit=3
  Planning:
    Buffers: shared hit=30
- Planning Time: 0.277 ms
- Execution Time: 0.119 ms
+ Planning Time: 0.281 ms
+ Execution Time: 0.101 ms
 (12 rows)
 
                                                           QUERY PLAN                                                           
 -------------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=6.30..6.31 rows=1 width=8) (actual time=0.101..0.102 rows=1 loops=1)
+ Aggregate  (cost=6.30..6.31 rows=1 width=8) (actual time=0.111..0.112 rows=1 loops=1)
    Buffers: shared hit=2 read=1
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..6.05 rows=101 width=0) (actual time=0.071..0.085 rows=101 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..6.05 rows=101 width=0) (actual time=0.079..0.094 rows=101 loops=1)
          Index Cond: (id >= 4900)
          Heap Fetches: 0
          Buffers: shared hit=2 read=1
- Planning Time: 0.090 ms
- Execution Time: 0.128 ms
+ Planning Time: 0.119 ms
+ Execution Time: 0.146 ms
 (8 rows)
 
                                                          QUERY PLAN                                                          
 -----------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=4.50..4.51 rows=1 width=8) (actual time=0.017..0.017 rows=1 loops=1)
+ Aggregate  (cost=4.50..4.51 rows=1 width=8) (actual time=0.019..0.020 rows=1 loops=1)
    Buffers: shared hit=3
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.47 rows=11 width=0) (actual time=0.005..0.008 rows=11 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.47 rows=11 width=0) (actual time=0.006..0.009 rows=11 loops=1)
          Index Cond: (id <= '12'::bigint)
          Heap Fetches: 0
          Buffers: shared hit=3
  Planning:
    Buffers: shared hit=3
- Planning Time: 0.145 ms
- Execution Time: 0.039 ms
+ Planning Time: 0.203 ms
+ Execution Time: 0.049 ms
 (10 rows)
 
                                                             QUERY PLAN                                                            
 ----------------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=38.80..38.81 rows=1 width=8) (actual time=0.445..0.446 rows=1 loops=1)
+ Aggregate  (cost=38.80..38.81 rows=1 width=8) (actual time=0.396..0.397 rows=1 loops=1)
    Buffers: shared hit=2 read=4
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..36.30 rows=1001 width=0) (actual time=0.071..0.341 rows=1001 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..36.30 rows=1001 width=0) (actual time=0.093..0.295 rows=1001 loops=1)
          Index Cond: ((id <= '2000'::bigint) AND (id >= 1000))
          Heap Fetches: 0
          Buffers: shared hit=2 read=4
- Planning Time: 0.115 ms
- Execution Time: 0.473 ms
+ Planning Time: 0.206 ms
+ Execution Time: 0.428 ms
 (8 rows)
 
                                                          QUERY PLAN                                                         
 ----------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=4.84..4.85 rows=1 width=8) (actual time=0.058..0.059 rows=1 loops=1)
+ Aggregate  (cost=4.84..4.85 rows=1 width=8) (actual time=0.094..0.095 rows=1 loops=1)
    Buffers: shared hit=1 read=1
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.78 rows=25 width=0) (actual time=0.055..0.055 rows=0 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.78 rows=25 width=0) (actual time=0.091..0.091 rows=0 loops=1)
          Index Cond: ((id <= '500'::bigint) AND (id >= 700))
          Heap Fetches: 0
          Buffers: shared hit=1 read=1
- Planning Time: 0.107 ms
- Execution Time: 0.083 ms
+ Planning Time: 0.147 ms
+ Execution Time: 0.126 ms
 (8 rows)
 
                                                             QUERY PLAN                                                            
 ----------------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=89.40..89.41 rows=1 width=8) (actual time=0.835..0.836 rows=1 loops=1)
+ Aggregate  (cost=89.40..89.41 rows=1 width=8) (actual time=0.973..0.974 rows=1 loops=1)
    Buffers: shared hit=3 read=7
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..82.76 rows=2656 width=0) (actual time=0.070..0.573 rows=2656 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..82.76 rows=2656 width=0) (actual time=0.091..0.707 rows=2656 loops=1)
          Index Cond: (id >= 2345)
          Heap Fetches: 0
          Buffers: shared hit=3 read=7
- Planning Time: 0.087 ms
- Execution Time: 0.864 ms
+ Planning Time: 0.123 ms
+ Execution Time: 1.011 ms
 (8 rows)
 
                                                         QUERY PLAN                                                         
 ---------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=4.30..4.31 rows=1 width=8) (actual time=0.028..0.029 rows=1 loops=1)
+ Aggregate  (cost=4.30..4.31 rows=1 width=8) (actual time=0.038..0.039 rows=1 loops=1)
    Buffers: shared hit=3
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.30 rows=1 width=0) (actual time=0.021..0.022 rows=1 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..4.30 rows=1 width=0) (actual time=0.029..0.030 rows=1 loops=1)
          Index Cond: (id = 3333)
          Heap Fetches: 0
          Buffers: shared hit=3
- Planning Time: 0.088 ms
- Execution Time: 0.054 ms
+ Planning Time: 0.118 ms
+ Execution Time: 0.072 ms
 (8 rows)
 
                                                            QUERY PLAN                                                           
 --------------------------------------------------------------------------------------------------------------------------------
- Aggregate  (cost=31.56..31.57 rows=1 width=8) (actual time=0.274..0.275 rows=1 loops=1)
+ Aggregate  (cost=31.56..31.57 rows=1 width=8) (actual time=0.296..0.297 rows=1 loops=1)
    Buffers: shared hit=5
-   ->  Index Only Scan using data_pkey on data  (cost=0.28..29.81 rows=701 width=0) (actual time=0.049..0.203 rows=699 loops=1)
+   ->  Index Only Scan using data_pkey on data  (cost=0.28..29.81 rows=701 width=0) (actual time=0.059..0.223 rows=699 loops=1)
          Index Cond: ((id >= 4100) AND (id <= '4800'::bigint))
          Filter: ((id <> 4490) AND (id <> 4796))
          Rows Removed by Filter: 2
          Heap Fetches: 0
          Buffers: shared hit=5
- Planning Time: 0.144 ms
- Execution Time: 0.304 ms
+ Planning Time: 0.186 ms
+ Execution Time: 0.333 ms
 (10 rows)
