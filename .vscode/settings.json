@@ -1,6 +1,0 @@
-{
-  "files.associations": {
-    "timestamp.h": "c",
-    "unistd.h": "c"
-  }
-}
