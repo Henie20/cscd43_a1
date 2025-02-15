@@ -174,8 +174,6 @@ ClockSweepTick(void)
  * buffers.
  */
 BufferDesc *LRU_victim (void) {
-
-	
 	time_t latest = LONG_MAX;
 	BufferDesc *buf = NULL;
 	BufferDesc *cur = NULL;
@@ -235,6 +233,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 
 	*from_ring = false;
 
+	// BEGIN OLDCODE
 	/*
 	 * If given a strategy object, see whether it can select a buffer. We
 	 * assume strategy objects don't need buffer_strategy_lock.
@@ -248,6 +247,7 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 	// 		return buf;
 	// 	}
 	// }
+	// END OLDCODE
 
 	/*
 	 * If asked, we need to waken the bgwriter. Since we don't want to rely on
@@ -342,7 +342,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 	}
 
 	// BEGIN NEWCODE
-
 	/* Nothing on the freelist, so run the "LRU" algorithm */
 	buf = LRU_victim();
 	if (buf != NULL) {
@@ -357,7 +356,6 @@ StrategyGetBuffer(BufferAccessStrategy strategy, uint32 *buf_state, bool *from_r
 			*/
 		elog(ERROR, "no unpinned buffers available");
 	}
-
 	// END NEWCODE
 }
 
