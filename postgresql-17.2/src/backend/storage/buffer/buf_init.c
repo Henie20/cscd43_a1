@@ -132,9 +132,9 @@ InitBufferPool(void)
 			 * management of this list is done by freelist.c.
 			 */
 			buf->freeNext = i + 1;
-			// BEGIN NEW CODE
+			// BEGIN NEWCODE
 			buf->access_time = time(0);
-			// END NEW CODE
+			// END NEWCODE
 
 			LWLockInitialize(BufferDescriptorGetContentLock(buf),
 							 LWTRANCHE_BUFFER_CONTENT);
