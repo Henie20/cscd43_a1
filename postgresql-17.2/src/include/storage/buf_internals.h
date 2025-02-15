@@ -248,9 +248,9 @@ typedef struct BufferDesc
 	BufferTag	tag;			/* ID of page contained in buffer */
 	int			buf_id;			/* buffer's index number (from 0) */
 
-	// BEGIN NEW CODE
-	time_t access_time; /* time of last access. */
-	// END NEW CODE
+	// BEGIN NEWCODE
+	time_t access_time; /* time of last access */
+	// END NEWCODE
 	
 	/* state of the tag, containing flags, refcount and usagecount */
 	pg_atomic_uint32 state;
