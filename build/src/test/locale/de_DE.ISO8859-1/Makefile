@@ -1,1 +1,0 @@
-/cmshome/pate1766/cscd43w25_space/postgresql-17.2/src/test/locale/de_DE.ISO8859-1/Makefile
