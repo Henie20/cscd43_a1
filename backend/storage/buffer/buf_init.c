@@ -17,6 +17,7 @@
 #include "storage/buf_internals.h"
 #include "storage/bufmgr.h"
 #include "storage/proc.h"
+#include <time.h>
 
 BufferDescPadded *BufferDescriptors;
 char	   *BufferBlocks;
@@ -131,6 +132,9 @@ InitBufferPool(void)
 			 * management of this list is done by freelist.c.
 			 */
 			buf->freeNext = i + 1;
+			// BEGIN NEWCODE
+			buf->access_time = time(0);
+			// END NEWCODE
 
 			LWLockInitialize(BufferDescriptorGetContentLock(buf),
 							 LWTRANCHE_BUFFER_CONTENT);

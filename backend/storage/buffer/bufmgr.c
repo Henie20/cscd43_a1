@@ -36,6 +36,7 @@
 
 #include <sys/file.h>
 #include <unistd.h>
+#include <time.h>
 
 #include "access/tableam.h"
 #include "access/xloginsert.h"
@@ -810,7 +811,8 @@ ReadBufferExtended(Relation reln, ForkNumber forkNum, BlockNumber blockNum,
 	 */
 	buf = ReadBuffer_common(reln, RelationGetSmgr(reln), 0,
 							forkNum, blockNum, mode, strategy);
-
+	
+	
 	return buf;
 }
 
@@ -1747,7 +1749,6 @@ BufferAlloc(SMgrRelation smgr, char relpersistence, ForkNumber forkNum,
 	 * Buffer contents are currently invalid.
 	 */
 	*foundPtr = false;
-
 	return victim_buf_hdr;
 }
 
@@ -2721,6 +2722,9 @@ PinBuffer(BufferDesc *buf, BufferAccessStrategy strategy)
 	}
 
 	ref->refcount++;
+	// BEGIN NEWCODE
+	buf->access_time = time(0);
+	// END NEWCODE
 	Assert(ref->refcount > 0);
 	ResourceOwnerRememberBuffer(CurrentResourceOwner, b);
 	return result;
@@ -2781,6 +2785,9 @@ PinBuffer_Locked(BufferDesc *buf)
 
 	ref = NewPrivateRefCountEntry(b);
 	ref->refcount++;
+	// BEGIN NEWCODE
+	buf->access_time = time(0);
+	// END NEWCODE
 
 	ResourceOwnerRememberBuffer(CurrentResourceOwner, b);
 }
@@ -5556,11 +5563,15 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	}
 
 	buf_state |= BM_IO_IN_PROGRESS;
+	
 	UnlockBufHdr(buf, buf_state);
 
 	ResourceOwnerRememberBufferIO(CurrentResourceOwner,
 								  BufferDescriptorGetBuffer(buf));
 
+	// BEGIN NEWCODE
+	buf->access_time = time(0);
+	// END NEWCODE
 	return true;
 }
 
