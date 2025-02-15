@@ -1157,8 +1157,10 @@ PinBufferForBlock(Relation rel,
 	{
 		bufHdr = BufferAlloc(smgr, persistence, forkNum, blockNum,
 							 strategy, foundPtr, io_context);
-		if (*foundPtr)
+		if (*foundPtr){
 			pgBufferUsage.shared_blks_hit++;
+		}
+
 	}
 	if (rel)
 	{
@@ -1188,6 +1190,8 @@ PinBufferForBlock(Relation rel,
 
 	return BufferDescriptorGetBuffer(bufHdr);
 }
+
+
 
 /*
  * ReadBuffer_common -- common logic for all ReadBuffer variants
@@ -2721,6 +2725,10 @@ PinBuffer(BufferDesc *buf, BufferAccessStrategy strategy)
 	}
 
 	ref->refcount++;
+
+	// BEGIN NEWCODE
+	buf->frequency++;
+	// END NEWCODE
 	Assert(ref->refcount > 0);
 	ResourceOwnerRememberBuffer(CurrentResourceOwner, b);
 	return result;
@@ -2781,6 +2789,10 @@ PinBuffer_Locked(BufferDesc *buf)
 
 	ref = NewPrivateRefCountEntry(b);
 	ref->refcount++;
+
+	// BEGIN NEWCODE
+	buf->frequency++;
+	// END NEWCODE
 
 	ResourceOwnerRememberBuffer(CurrentResourceOwner, b);
 }
@@ -5561,6 +5573,9 @@ StartBufferIO(BufferDesc *buf, bool forInput, bool nowait)
 	ResourceOwnerRememberBufferIO(CurrentResourceOwner,
 								  BufferDescriptorGetBuffer(buf));
 
+	// BEGIN NEWCODE
+	buf->frequency++;
+	// END NEWCODE
 	return true;
 }
 

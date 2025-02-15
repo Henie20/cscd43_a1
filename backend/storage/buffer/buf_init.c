@@ -132,6 +132,10 @@ InitBufferPool(void)
 			 */
 			buf->freeNext = i + 1;
 
+			// BEGIN NEWCODE
+			buf->frequency = 0;
+			// END NEWCODE
+
 			LWLockInitialize(BufferDescriptorGetContentLock(buf),
 							 LWTRANCHE_BUFFER_CONTENT);
 
