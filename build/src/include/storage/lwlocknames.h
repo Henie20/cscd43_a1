@@ -1,1 +1,0 @@
-/courses/courses/cscd43w25/pate1766/build/src/backend/storage/lmgr/lwlocknames.h
