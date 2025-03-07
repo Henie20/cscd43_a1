@@ -422,6 +422,35 @@ ExecEndHash(HashState *node)
 }
 
 
+
+// BEGIN NEWCODE
+int hash_function1(int value, int table_size) 
+{
+	int hashed_value;
+	float c = 0.21;
+	hashed_value = floor(table_size * (value * (int) c % 1));
+	return hashed_value;
+}
+
+int hash_function2(int value, int table_size)
+{
+	return value % table_size;
+}
+
+int hash_function3(int value, int table_size)
+{
+	int hashed_value = value * (value + 3) % table_size;
+}
+
+int hash_function4(int value, int table_size)
+{
+	int hashed_value;
+	float c = 0.77;
+	hashed_value = floor(table_size * (value * (int) c % 1));
+	return hashed_value;
+}
+// END NEWCODE
+
 /* ----------------------------------------------------------------
  *		ExecHashTableCreate
  *
