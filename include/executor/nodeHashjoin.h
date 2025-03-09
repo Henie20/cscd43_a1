@@ -18,6 +18,11 @@
 #include "nodes/execnodes.h"
 #include "storage/buffile.h"
 
+// BEGIN NEWCODE
+bool BloomFilterCheck(int i, int element);
+void BloomFilterInsert (int i, int element);
+// END NEWCODE
+
 extern HashJoinState *ExecInitHashJoin(HashJoin *node, EState *estate, int eflags);
 extern void ExecEndHashJoin(HashJoinState *node);
 extern void ExecReScanHashJoin(HashJoinState *node);

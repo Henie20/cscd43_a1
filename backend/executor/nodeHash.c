@@ -439,7 +439,7 @@ int hash_function2(int value, int table_size)
 
 int hash_function3(int value, int table_size)
 {
-	int hashed_value = value * (value + 3) % table_size;
+	return value * (value + 3) % table_size;
 }
 
 int hash_function4(int value, int table_size)
@@ -1927,6 +1927,26 @@ ExecHashGetHashValue(HashJoinTable hashtable,
 			hkey = DatumGetUInt32(FunctionCall1Coll(&hashfunctions[i], hashtable->collations[i], keyval));
 			hashkey ^= hkey;
 		}
+
+		// BEGIN NEWCODE
+		if (!outer_tuple) 
+		{
+			/* Add the keyval to the corresponding bloom filter */
+			int bucketno;
+			uint32		nbuckets = (uint32) hashtable->nbuckets;
+			bucketno = *hashvalue & (nbuckets - 1);
+			BloomFilterInsert(bucketno, (int) keyval);
+		} 
+		else 
+		{
+			/* Return false if bloom filter returns negative.*/
+			int bucketno;
+			uint32		nbuckets = (uint32) hashtable->nbuckets;
+			bucketno = *hashvalue & (nbuckets - 1);
+			if (!BloomFilterCheck(bucketno, (int) keyval))
+				return false;
+		}
+		// END NEWCODE
 
 		i++;
 	}

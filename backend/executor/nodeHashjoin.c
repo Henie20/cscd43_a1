@@ -188,6 +188,14 @@
 /* Returns true if doing null-fill on inner relation */
 #define HJ_FILL_INNER(hjstate)	((hjstate)->hj_NullOuterTupleSlot != NULL)
 
+// BEGIN NEWCODE
+char **bitArray;
+int bloomfilter_bits = 10;
+int total_matches = 0;
+int total_positives = 0;
+static void allocate_bitarray(int nbuckets);
+// END NEWCODE
+
 static TupleTableSlot *ExecHashJoinOuterGetTuple(PlanState *outerNode,
 												 HashJoinState *hjstate,
 												 uint32 *hashvalue);
@@ -201,6 +209,88 @@ static TupleTableSlot *ExecHashJoinGetSavedTuple(HashJoinState *hjstate,
 static bool ExecHashJoinNewBatch(HashJoinState *hjstate);
 static bool ExecParallelHashJoinNewBatch(HashJoinState *hjstate);
 static void ExecParallelHashJoinPartitionOuter(HashJoinState *hjstate);
+
+// BEGIN NEWCODE
+/*
+* Allocates nbuckets char arrays where each array
+*	represents bloomfilter_bits bits.
+*/
+void allocate_bitarray(int nbuckets) {
+	bitArray = (char **)malloc(nbuckets * sizeof(char *));
+	
+	if (bitArray == NULL) 
+	{
+		elog(ERROR, "Memory allocation failed for bitarray\n");
+		return;
+	}
+
+	for (int i = 0; i < nbuckets; i++) 
+	{
+		bitArray[i] = (char *)malloc((bloomfilter_bits/8 + 1) * sizeof(char));
+		if (bitArray[i] == NULL) 
+		{
+			elog(ERROR, "Memory allocation failed for row %d\n", i);
+			return;
+		}
+		else
+		{
+			memset(bitArray[i], 0, (bloomfilter_bits/8 + 1) * sizeof(char));
+		}
+	}
+}
+
+/*  
+* Inserts element  into the i_th bloom filter.
+* m is the number of bits for the bitmap array
+* of the i_th bloom filter.
+*/
+void 
+BloomFilterInsert (int i, int element) {
+	int bit_idx, char_no, val;
+	int a = hash_function1(element, bloomfilter_bits);
+	int b = hash_function2(element, bloomfilter_bits);
+	int c = hash_function3(element, bloomfilter_bits);
+	int d = hash_function4(element, bloomfilter_bits);
+	int arr[4] = {a, b, c, d};
+	for(int j = 0; j < 4; j++)
+	{
+		val = arr[j];
+		char_no = val/8;
+		bit_idx = val % 8;
+		bitArray[i][char_no] |= (1 << bit_idx);
+	}
+	elog(LOG, "%d,%d,%d,%d\n", a, b, c, d);
+}
+
+/*  
+* Checks if element is in the set of the i_th bloom filter.
+* m is the number of bits for the bitmap array
+* of the i_th bloom filter.
+*/
+bool BloomFilterCheck(int i, int element) {
+	int bit_idx, char_no, val;
+	int output;
+	int bit_val[4];
+	int a = hash_function1(element, bloomfilter_bits);
+	int b = hash_function2(element, bloomfilter_bits);
+	int c = hash_function3(element, bloomfilter_bits);
+	int d = hash_function4(element, bloomfilter_bits);
+	int hash_output[4] = {a, b, c, d};
+
+	for(int j = 0; j < 4; j++) {
+		val = hash_output[j];
+		char_no = val/8;
+		bit_idx = val % 8;
+		bit_val[j] = (bitArray[i][char_no] & (1 << bit_idx));
+	}
+
+	elog(LOG, "%d,%d,%d,%d\n", bit_val[0], bit_val[1], bit_val[2], bit_val[3]);
+	output = (bit_val[0] && bit_val[1] && bit_val[2] && bit_val[3]);
+	if (output)
+		total_positives++;
+	return output;
+}
+// END NEWCODE
 
 
 /* ----------------------------------------------------------------
@@ -336,6 +426,9 @@ ExecHashJoinImpl(PlanState *pstate, bool parallel)
 												node->hj_Collations,
 												HJ_FILL_INNER(node));
 				node->hj_HashTable = hashtable;
+				// BEGIN NEWCODE
+				allocate_bitarray(hashtable->nbuckets);
+				// END NEWCODE
 
 				/*
 				 * Execute the Hash node, to build the hash table.  If using
@@ -533,6 +626,7 @@ ExecHashJoinImpl(PlanState *pstate, bool parallel)
 					}
 				}
 
+
 				/*
 				 * We've got a match, but still need to test non-hashed quals.
 				 * ExecScanHashBucket already set up all the state needed to
@@ -548,7 +642,9 @@ ExecHashJoinImpl(PlanState *pstate, bool parallel)
 				if (joinqual == NULL || ExecQual(joinqual, econtext))
 				{
 					node->hj_MatchedOuter = true;
-
+					// BEGIN NEWCODE
+					total_matches++;
+					// END NEWCODE
 
 					/*
 					 * This is really only needed if HJ_FILL_INNER(node), but
@@ -872,6 +968,9 @@ ExecEndHashJoin(HashJoinState *node)
 	 */
 	ExecEndNode(outerPlanState(node));
 	ExecEndNode(innerPlanState(node));
+	// BEGIN NEWCODE
+	elog(LOG, "total positives:%d, total_matches:%d\n", total_positives, total_matches);
+	// END NEWCODE 
 }
 
 /*
