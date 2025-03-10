@@ -252,6 +252,7 @@ BloomFilterInsert (int i, int element) {
 	int c = hash_function3(element, bloomfilter_bits);
 	int d = hash_function4(element, bloomfilter_bits);
 	int arr[4] = {a, b, c, d};
+
 	for(int j = 0; j < 4; j++)
 	{
 		val = arr[j];
@@ -259,7 +260,7 @@ BloomFilterInsert (int i, int element) {
 		bit_idx = val % 8;
 		bitArray[i][char_no] |= (1 << bit_idx);
 	}
-	elog(LOG, "%d,%d,%d,%d\n", a, b, c, d);
+
 }
 
 /*  
@@ -284,7 +285,6 @@ bool BloomFilterCheck(int i, int element) {
 		bit_val[j] = (bitArray[i][char_no] & (1 << bit_idx));
 	}
 
-	elog(LOG, "%d,%d,%d,%d\n", bit_val[0], bit_val[1], bit_val[2], bit_val[3]);
 	output = (bit_val[0] && bit_val[1] && bit_val[2] && bit_val[3]);
 	if (output)
 		total_positives++;
@@ -811,6 +811,11 @@ ExecInitHashJoin(HashJoin *node, EState *estate, int eflags)
 	TupleDesc	outerDesc,
 				innerDesc;
 	const TupleTableSlotOps *ops;
+
+	// BEGIN NEWCODE
+	total_matches = 0;
+	total_positives = 0;
+	// END NEWCODE
 
 	/* check for unsupported flags */
 	Assert(!(eflags & (EXEC_FLAG_BACKWARD | EXEC_FLAG_MARK)));

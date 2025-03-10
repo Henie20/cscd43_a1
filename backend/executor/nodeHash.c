@@ -1934,7 +1934,7 @@ ExecHashGetHashValue(HashJoinTable hashtable,
 			/* Add the keyval to the corresponding bloom filter */
 			int bucketno;
 			uint32		nbuckets = (uint32) hashtable->nbuckets;
-			bucketno = *hashvalue & (nbuckets - 1);
+			bucketno = hashkey & (nbuckets - 1);
 			BloomFilterInsert(bucketno, (int) keyval);
 		} 
 		else 
@@ -1942,7 +1942,7 @@ ExecHashGetHashValue(HashJoinTable hashtable,
 			/* Return false if bloom filter returns negative.*/
 			int bucketno;
 			uint32		nbuckets = (uint32) hashtable->nbuckets;
-			bucketno = *hashvalue & (nbuckets - 1);
+			bucketno = hashkey & (nbuckets - 1);
 			if (!BloomFilterCheck(bucketno, (int) keyval))
 				return false;
 		}
