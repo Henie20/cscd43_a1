@@ -193,6 +193,7 @@ char **bitArray;
 int bloomfilter_bits = 10;
 int total_matches = 0;
 int total_positives = 0;
+int total_negatives = 0;
 static void allocate_bitarray(int nbuckets);
 // END NEWCODE
 
@@ -288,6 +289,8 @@ bool BloomFilterCheck(int i, int element) {
 	output = (bit_val[0] && bit_val[1] && bit_val[2] && bit_val[3]);
 	if (output)
 		total_positives++;
+	else
+		total_negatives++;
 	return output;
 }
 // END NEWCODE
@@ -815,6 +818,7 @@ ExecInitHashJoin(HashJoin *node, EState *estate, int eflags)
 	// BEGIN NEWCODE
 	total_matches = 0;
 	total_positives = 0;
+	total_negatives = 0;
 	// END NEWCODE
 
 	/* check for unsupported flags */
@@ -974,7 +978,7 @@ ExecEndHashJoin(HashJoinState *node)
 	ExecEndNode(outerPlanState(node));
 	ExecEndNode(innerPlanState(node));
 	// BEGIN NEWCODE
-	elog(LOG, "total positives:%d, total_matches:%d\n", total_positives, total_matches);
+	elog(LOG, "total positives:%d, total_matches:%d total_negatives:%d\n", total_positives, total_matches, total_negatives);
 	// END NEWCODE 
 }
 

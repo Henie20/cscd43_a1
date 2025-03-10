@@ -1,0 +1,98 @@
+                                                               QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Hash Join  (cost=49.10..87.75 rows=100 width=8) (actual time=0.807..61.738 rows=501 loops=1)
+   Hash Cond: (testr.id = tests.id)
+   ->  Index Only Scan using testr_pkey on testr  (cost=0.29..36.30 rows=1001 width=4) (actual time=0.090..0.418 rows=1001 loops=1)
+         Index Cond: ((id >= 1000) AND (id <= 2000))
+         Heap Fetches: 0
+   ->  Hash  (cost=36.30..36.30 rows=1001 width=4) (actual time=0.466..0.467 rows=1001 loops=1)
+         Buckets: 1024  Batches: 1  Memory Usage: 44kB
+         ->  Index Only Scan using tests_pkey on tests  (cost=0.29..36.30 rows=1001 width=4) (actual time=0.049..0.235 rows=1001 loops=1)
+               Index Cond: ((id >= 1500) AND (id <= 2500))
+               Heap Fetches: 0
+ Planning Time: 0.251 ms
+ Execution Time: 61.885 ms
+(12 rows)
+
+                                                               QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Hash Join  (cost=210.28..401.30 rows=4000 width=8) (actual time=4.393..651.731 rows=3000 loops=1)
+   Hash Cond: (tests.id = testr.id)
+   ->  Seq Scan on tests  (cost=0.00..170.00 rows=8000 width=4) (actual time=0.068..3.239 rows=8000 loops=1)
+         Filter: (id <= 8000)
+         Rows Removed by Filter: 2000
+   ->  Hash  (cost=147.78..147.78 rows=5000 width=4) (actual time=2.316..2.317 rows=5000 loops=1)
+         Buckets: 8192  Batches: 1  Memory Usage: 240kB
+         ->  Index Only Scan using testr_pkey on testr  (cost=0.29..147.78 rows=5000 width=4) (actual time=0.042..0.999 rows=5000 loops=1)
+               Index Cond: (id > 5000)
+               Heap Fetches: 0
+ Planning Time: 0.234 ms
+ Execution Time: 652.340 ms
+(12 rows)
+
+                                                              QUERY PLAN                                                                
+------------------------------------------------------------------------------------------------------------------------------------------
+ Hash Join  (cost=126.25..317.27 rows=2399 width=8) (actual time=1.789..162.723 rows=1000 loops=1)
+   Hash Cond: (tests.id = testr.id)
+   ->  Seq Scan on tests  (cost=0.00..170.00 rows=8001 width=4) (actual time=0.294..2.267 rows=8001 loops=1)
+         Filter: (id >= 2000)
+         Rows Removed by Filter: 1999
+   ->  Hash  (cost=88.77..88.77 rows=2999 width=4) (actual time=1.365..1.367 rows=2999 loops=1)
+         Buckets: 4096  Batches: 1  Memory Usage: 138kB
+         ->  Index Only Scan using testr_pkey on testr  (cost=0.29..88.77 rows=2999 width=4) (actual time=0.043..0.636 rows=2999 loops=1)
+               Index Cond: (id < 3000)
+               Heap Fetches: 0
+ Planning Time: 0.240 ms
+ Execution Time: 162.976 ms
+(12 rows)
+
+                                                               QUERY PLAN                                                                 
+-------------------------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=203.71..203.72 rows=1 width=8) (actual time=4.185..4.187 rows=1 loops=1)
+   ->  Hash Join  (cost=7.25..203.47 rows=99 width=0) (actual time=0.167..4.160 rows=80 loops=1)
+         Hash Cond: (tests.id = testr.id)
+         ->  Seq Scan on tests  (cost=0.00..170.00 rows=9981 width=4) (actual time=0.035..1.916 rows=9981 loops=1)
+               Filter: (id >= 20)
+               Rows Removed by Filter: 19
+         ->  Hash  (cost=6.02..6.02 rows=99 width=4) (actual time=0.058..0.059 rows=99 loops=1)
+               Buckets: 1024  Batches: 1  Memory Usage: 12kB
+               ->  Index Only Scan using testr_pkey on testr  (cost=0.29..6.02 rows=99 width=4) (actual time=0.015..0.030 rows=99 loops=1)
+                     Index Cond: (id < 100)
+                     Heap Fetches: 0
+ Planning Time: 12.858 ms
+ Execution Time: 4.264 ms
+(13 rows)
+
+                                                    QUERY PLAN                                                        
+-------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=447.72..447.73 rows=1 width=8) (actual time=1591.043..1591.059 rows=1 loops=1)
+   ->  Hash Join  (cost=241.26..434.90 rows=5130 width=0) (actual time=30.556..1589.636 rows=4700 loops=1)
+         Hash Cond: (testr.id = tests.id)
+         ->  Seq Scan on testr  (cost=0.00..170.00 rows=8999 width=4) (actual time=0.088..29.264 rows=8999 loops=1)
+               Filter: (id < 9000)
+               Rows Removed by Filter: 1001
+         ->  Hash  (cost=170.00..170.00 rows=5701 width=4) (actual time=3.102..3.104 rows=5701 loops=1)
+               Buckets: 8192  Batches: 1  Memory Usage: 265kB
+               ->  Seq Scan on tests  (cost=0.00..170.00 rows=5701 width=4) (actual time=0.636..1.775 rows=5701 loops=1)
+                     Filter: (id >= 4300)
+                     Rows Removed by Filter: 4299
+ Planning Time: 0.313 ms
+ Execution Time: 1591.140 ms
+(13 rows)
+
+                                                       QUERY PLAN                                                        
+-------------------------------------------------------------------------------------------------------------------------
+ Aggregate  (cost=500.79..500.80 rows=1 width=8) (actual time=1201.497..1201.501 rows=1 loops=1)
+   ->  Hash Right Join  (cost=318.75..490.02 rows=4306 width=0) (actual time=4.668..1199.977 rows=5002 loops=1)
+         Hash Cond: (tests.id = testr.id)
+         Filter: (((testr.id >= 1000) AND (testr.id <= 4000)) OR ((tests.id >= 5000) AND (testr.id <= 7000)))
+         Rows Removed by Filter: 1998
+         ->  Seq Scan on tests  (cost=0.00..145.00 rows=10000 width=4) (actual time=0.015..2.764 rows=10000 loops=1)
+         ->  Hash  (cost=220.00..220.00 rows=7900 width=4) (actual time=3.857..3.858 rows=7000 loops=1)
+               Buckets: 8192  Batches: 1  Memory Usage: 311kB
+               ->  Seq Scan on testr  (cost=0.00..220.00 rows=7900 width=4) (actual time=0.059..2.202 rows=7000 loops=1)
+                     Filter: (((id >= 1000) AND (id <= 4000)) OR (id <= 7000))
+                     Rows Removed by Filter: 3000
+ Planning Time: 0.292 ms
+ Execution Time: 1201.575 ms
+(13 rows)
