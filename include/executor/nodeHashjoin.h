@@ -19,8 +19,9 @@
 #include "storage/buffile.h"
 
 // BEGIN NEWCODE
-bool BloomFilterCheck(int i, int element);
-void BloomFilterInsert (int i, int element);
+extern int total_matches;
+extern int total_positives;
+extern int total_negatives;
 // END NEWCODE
 
 extern HashJoinState *ExecInitHashJoin(HashJoin *node, EState *estate, int eflags);

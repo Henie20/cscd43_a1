@@ -21,11 +21,10 @@ struct SharedHashJoinBatch;
 
 
 // BEGIN NEW CODE
-extern int hash_function1(int value, int table_size);
-extern int hash_function2(int value, int table_size);
-extern int hash_function3(int value, int table_size);
-extern int hash_function4(int value, int table_size);
-extern int hash_function5(int value, int table_size);
+extern int hash_function1(int value, int m);
+extern int hash_function2(int value, int m);
+extern int hash_function3(int value, int m);
+extern int hash_function4(int value, int m);
 // END NEW CODE
 
 extern HashState *ExecInitHash(Hash *node, EState *estate, int eflags);
