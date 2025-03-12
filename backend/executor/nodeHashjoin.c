@@ -193,6 +193,7 @@ char **bitArray;
 int bloomfilter_bits = 10;
 int total_matches = 0;
 int total_positives = 0;
+int total_negatives = 0;
 static void allocate_bitarray(int nbuckets);
 // END NEWCODE
 
@@ -251,9 +252,9 @@ BloomFilterInsert (int i, int element) {
 	int b = hash_function2(element, bloomfilter_bits);
 	int c = hash_function3(element, bloomfilter_bits);
 	int d = hash_function4(element, bloomfilter_bits);
-	int arr[4] = {a, b, c, d};
+	int arr[4] = {a, c, c, d};
 
-	for(int j = 0; j < 4; j++)
+	for(int j = 0; j < 2; j++)
 	{
 		val = arr[j];
 		char_no = val/8;
@@ -276,18 +277,20 @@ bool BloomFilterCheck(int i, int element) {
 	int b = hash_function2(element, bloomfilter_bits);
 	int c = hash_function3(element, bloomfilter_bits);
 	int d = hash_function4(element, bloomfilter_bits);
-	int hash_output[4] = {a, b, c, d};
+	int hash_output[4] = {a, c, c, d};
 
-	for(int j = 0; j < 4; j++) {
+	for(int j = 0; j < 3; j++) {
 		val = hash_output[j];
 		char_no = val/8;
 		bit_idx = val % 8;
 		bit_val[j] = (bitArray[i][char_no] & (1 << bit_idx));
 	}
 
-	output = (bit_val[0] && bit_val[1] && bit_val[2] && bit_val[3]);
+	output = (bit_val[0] && bit_val[1]);
 	if (output)
 		total_positives++;
+	else
+		total_negatives++;
 	return output;
 }
 // END NEWCODE
@@ -815,6 +818,7 @@ ExecInitHashJoin(HashJoin *node, EState *estate, int eflags)
 	// BEGIN NEWCODE
 	total_matches = 0;
 	total_positives = 0;
+	total_negatives = 0;
 	// END NEWCODE
 
 	/* check for unsupported flags */
@@ -974,7 +978,7 @@ ExecEndHashJoin(HashJoinState *node)
 	ExecEndNode(outerPlanState(node));
 	ExecEndNode(innerPlanState(node));
 	// BEGIN NEWCODE
-	elog(LOG, "total positives:%d, total_matches:%d\n", total_positives, total_matches);
+	elog(LOG, "total positives:%d, total negatives: %d, total_matches:%d\n", total_positives, total_negatives, total_matches);
 	// END NEWCODE 
 }
 
