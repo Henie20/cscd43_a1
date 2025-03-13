@@ -428,9 +428,8 @@ char **bitArray;
 total_matches = 0;
 total_positives = 0;
 total_negatives = 0;
-// END NEWCODE
 
-// BEGIN NEWCODE
+/* Returns value hashed to a number between 1 and m. */
 int hash_function1(int value, int m) 
 {
 	int hashed_value;
@@ -439,24 +438,24 @@ int hash_function1(int value, int m)
 	return hashed_value;
 }
 
+/* Returns value hashed to a number between 1 and m. */
 int hash_function2(int value, int m)
 {
 	return value % m;
 }
 
+/* Returns value hashed to a number between 1 and m. */
 int hash_function3(int value, int m)
 {
 	return value * (value + 3) % m;
 }
 
+/* Returns value hashed to a number between 1 and m. */
 int hash_function4(int value, int m)
 {
 	return value * 2654435761 % 2^m;
 }
-// END NEWCODE
 
-
-// BEGIN NEWCODE
 /*
 * Allocates nbuckets char arrays where each array
 *	represents bloomfilter_bits bits.

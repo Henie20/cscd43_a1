@@ -19,6 +19,7 @@
 #include "storage/buffile.h"
 
 // BEGIN NEWCODE
+/* Values used to store the number of matches, positives, and negatives for each hash join. */
 extern int total_matches;
 extern int total_positives;
 extern int total_negatives;

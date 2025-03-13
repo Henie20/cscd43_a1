@@ -20,12 +20,12 @@
 struct SharedHashJoinBatch;
 
 
-// BEGIN NEW CODE
+// BEGIN NEWCODE
 extern int hash_function1(int value, int m);
 extern int hash_function2(int value, int m);
 extern int hash_function3(int value, int m);
 extern int hash_function4(int value, int m);
-// END NEW CODE
+// END NEWCODE
 
 extern HashState *ExecInitHash(Hash *node, EState *estate, int eflags);
 extern Node *MultiExecHash(HashState *node);
