@@ -453,7 +453,7 @@ int hash_function3(int value, int m)
 /* Returns value hashed to a number between 1 and m. */
 int hash_function4(int value, int m)
 {
-	return value * 2654435761 % 2^m;
+	return (value * 37) % m;
 }
 
 /*
@@ -471,7 +471,7 @@ void allocate_bitarray(int nbuckets) {
 
 	for (int i = 0; i < nbuckets; i++) 
 	{
-		bitArray[i] = (char *)malloc((bloomfilter_bits/8 + 1) * sizeof(char));
+		bitArray[i] = (char *)malloc((bloomfilter_bits/8 + bloomfilter_bits % 8) * sizeof(char));
 		if (bitArray[i] == NULL) 
 		{
 			elog(ERROR, "Memory allocation failed for row %d\n", i);
@@ -479,7 +479,7 @@ void allocate_bitarray(int nbuckets) {
 		}
 		else
 		{
-			memset(bitArray[i], 0, (bloomfilter_bits/8 + 1) * sizeof(char));
+			memset(bitArray[i], 0, (bloomfilter_bits/8 + bloomfilter_bits % 8) * sizeof(char));
 		}
 	}
 }
@@ -810,7 +810,9 @@ ExecChooseHashTableSize(double ntuples, int tupwidth, bool useskew,
 	if (ntuples <= 0.0)
 		ntuples = 1000.0;
 	// BEGIN NEWCODE
-	bloomfilter_bits = (int) Max(ceil(0.065 * ntuples), bloomfilter_bits);
+
+	// Dynamic allocation of bloom filter bits: We choose 100 bits / 1000 tuples = 0.01 bits per tuple
+	bloomfilter_bits = (int) Max(ceil(0.01 * ntuples), bloomfilter_bits);
 	// END NEWCODE
 	/*
 	 * Estimate tupsize based on footprint of tuple in hashtable... note this
